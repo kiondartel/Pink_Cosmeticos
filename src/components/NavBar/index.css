@@ -1,0 +1,91 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #ff66b2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.brand {
+  color: white;
+  margin-right: 20px;
+}
+
+.brand h1 {
+  margin: 0;
+}
+
+.menu-items {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.menu-itens a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.menu-itens a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-and-cart {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-and-cart input {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.search-and-cart button {
+  padding: 5px 15px;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.shopping-cart {
+  margin-left: 7px;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+.customDrawer {
+  background-color: #333; /* Ou sua imagem de background */
+  /* Outros estilos que você deseja adicionar */
+}
+.drawer {
+  background-color: blue;
+}
+@media (max-width: 1004px) {
+  .menu-itens {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
