@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./index.css";
 import { FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
 import { Drawer, List, ListItem, ListItemText } from "@mui/material";
+import SearchBar from "../SearchBar";
 class NavBar extends Component {
   static iconProsp = {
     color: "white",
@@ -47,8 +48,7 @@ class NavBar extends Component {
           <a href="/">Contato</a>
         </ul>
         <div className="search-and-cart">
-          <input type="text" placeholder="Pesquisar produtos" />
-          <button type="submit">Pesquisar</button>
+          <SearchBar />
           <div className="shopping-cart">
             <FaShoppingCart {...NavBar.iconProsp} />
           </div>

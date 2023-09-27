@@ -44,7 +44,6 @@ body {
 .search-and-cart {
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 
 .search-and-cart input {
@@ -75,8 +74,7 @@ body {
   border-radius: 8px;
 }
 .customDrawer {
-  background-color: #333; /* Ou sua imagem de background */
-  /* Outros estilos que você deseja adicionar */
+  background-color: #333;
 }
 .drawer {
   background-color: blue;
