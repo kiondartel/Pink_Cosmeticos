@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #ff66b2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about {
+  width: 250px;
+  cursor: pointer;
+}
+
+.contact {
+  width: 250px;
+  cursor: pointer;
+}
+
+.social-media {
+  width: 250px;
+  cursor: pointer;
+}
