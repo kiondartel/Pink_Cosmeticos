@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 87.5vh;
+}
+.content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(252, 252, 252, 0.629);
+}
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 25%;
+  min-height: 70vh;
+}
+
+.img-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 68vh;
+  min-width: 74%;
+  background-image: url("../../assets/images/home.jpg");
+  background-size: cover;
+  background-position: center center;
+  border-radius: 50%;
+}
+.content img {
+  max-width: 70%;
+}
+
+.content h1 {
+  color: rgb(187, 59, 81);
+  font-size: 3rem;
+}
+
+.content p {
+  color: white;
+}
