@@ -6,8 +6,8 @@ class Header extends Component {
       <div className="container">
         <div className="content">
           <div className="text-content">
-            <h1>Confira nosso cosmeticos Ivone</h1>
-            <p>nossos produtos sao de qualidade</p>
+            <h1>Pink Cosmeticos</h1>
+            <h2>nossos produtos sao de qualidade</h2>
           </div>
           <div className="img-content" />
         </div>

@@ -1,0 +1,32 @@
+.product-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+.product-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.product-content div {
+  margin: 10px;
+}
+
+.product-content img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+  .product-content {
+    flex-direction: column;
+  }
+}
