@@ -9,25 +9,25 @@ const initialState = [
     nomeProduto: "Esmaltes",
     thumbnail: esmalteThumb,
     id: "esmalte",
-    descrição: "Temos varios tipos de esmaltes",
+    descricao: "Temos varios tipos de esmaltes",
   },
   {
     nomeProduto: "Batom",
     thumbnail: batomThumb,
     id: "batom",
-    descrição: "Temos varios tipos de baton",
+    descricao: "Temos varios tipos de baton",
   },
   {
     nomeProduto: "Base",
     thumbnail: baseThumb,
     id: "base",
-    descrição: "Temos varios tipos de base",
+    descricao: "Temos varios tipos de base",
   },
   {
     nomeProduto: "Hidratante",
     thumbnail: hidratanteThumb,
     id: "hidratante",
-    descrição: "Temos varios tipos de hidratante",
+    descricao: "Temos varios tipos de hidratante",
   },
 ];
 
