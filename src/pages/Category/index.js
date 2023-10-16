@@ -2,8 +2,21 @@ import { Component } from "react";
 import { connect } from "react-redux";
 import Header from "../../components/Header";
 import NavBar from "../../components/NavBar";
-import "./products.css";
-class ProductList extends Component {
+import Items from "../../components/items";
+import "./category.css";
+import { fetchAndSetItems } from "../../actions/itens_actions";
+
+class Category extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  componentDidMount() {
+    this.props.fetchItems();
+  }
+
+  componentDidUpdate() {}
   render() {
     const { categories, categoryName, itens } = this.props;
 
@@ -11,7 +24,7 @@ class ProductList extends Component {
       (category) => category.id === categoryName
     );
 
-    const selectedItens = itens.filter(
+    const selectedItems = itens.data.filter(
       (item) => item.categoria === categoryName
     );
     return (
@@ -22,17 +35,9 @@ class ProductList extends Component {
           description={selectedCategory.descricao}
           image={selectedCategory.thumbnail}
         />
-        <div className="itens-container">
-          {selectedItens.map((itens) => (
-            <div key={itens.id}>
-              <h1>{itens.titulo}</h1>
-              <img src={itens.foto} alt={itens.titulo} />
-              <p>{itens.descricao}</p>
-              <div className="buy-container">
-                <h3>R${itens.preco}</h3>
-                <button>Comprar</button>
-              </div>
-            </div>
+        <div className="parent-container">
+          {selectedItems.map((items) => (
+            <Items key={items.id} {...items} />
           ))}
         </div>
       </>
@@ -44,4 +49,8 @@ const mapStateToProps = (state) => ({
   categories: state.categories,
 });
 
-export default connect(mapStateToProps)(ProductList);
+const mapDispatchToProps = (dispatch) => ({
+  fetchItems: () => dispatch(fetchAndSetItems()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Category);

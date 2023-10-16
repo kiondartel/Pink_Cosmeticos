@@ -3,6 +3,8 @@ import "./index.css";
 import { FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
 import { Drawer, List, ListItem, ListItemText } from "@mui/material";
 import SearchBar from "../SearchBar";
+import { Link } from "react-router-dom";
+
 class NavBar extends Component {
   static iconProsp = {
     color: "white",
@@ -27,8 +29,13 @@ class NavBar extends Component {
 
   renderLinks = () => (
     <List>
-      {["Início", "Produtos", "Sobre Nós", "Contato"].map((text) => (
-        <ListItem button key={text}>
+      {["Início", "Produtos", "Sobre Nós"].map((text) => (
+        <ListItem
+          button
+          key={text}
+          component={Link}
+          to={`/${text.toLowerCase()}`}
+        >
           <ListItemText primary={text} />
         </ListItem>
       ))}
@@ -38,14 +45,13 @@ class NavBar extends Component {
   render() {
     return (
       <nav className="navbar">
-        <div className="brand">
+        <div className="brand" onClick={() => {}} style={{ cursor: "pointer" }}>
           <h1>Pink Cosmeticos</h1>
         </div>
         <ul className="menu-itens">
-          <a href="/">Início</a>
-          <a href="/">Produtos</a>
-          <a href="/">Sobre Nós</a>
-          <a href="/">Contato</a>
+          <Link to="/">Início</Link>
+          <Link to="/category">Produtos</Link>
+          <Link to="/about">Sobre Nós</Link>
         </ul>
         <div className="search-and-cart">
           <SearchBar />

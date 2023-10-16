@@ -2,11 +2,11 @@
 import React, { Component } from "react";
 import { Route, Routes, BrowserRouter, useParams } from "react-router-dom";
 import Home from "../pages/Home";
-import ProductList from "../pages/ProductList";
+import Category from "../pages/Category";
 
 function ProductsWrapper() {
   const params = useParams();
-  return <ProductList {...params} />;
+  return <Category {...params} />;
 }
 
 class Router extends Component {
