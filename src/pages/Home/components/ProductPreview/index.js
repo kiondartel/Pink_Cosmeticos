@@ -10,7 +10,7 @@ class ProductPreview extends Component {
   }
 
   onProductClick = (id) => {
-    window.location.href = `/${id}`;
+    window.location.href = `/category/${id}`;
   };
 
   render() {
